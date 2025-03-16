@@ -1,0 +1,10 @@
+[
+	{
+		"Name": "App1",
+		"Value": true
+	},
+	{
+		"Name": "App2",
+		"Value": false
+	}
+]
