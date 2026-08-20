@@ -9,7 +9,7 @@ MASSIVE_API_KEY = os.environ.get("MASSIVE_API_KEY")
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-target_date = datetime.now() - timedelta(days=2)
+target_date = datetime.now() - timedelta(days=1)
 date_str_api = target_date.strftime("%Y-%m-%d") 
 date_int = int(target_date.strftime("%Y%m%d"))
 
