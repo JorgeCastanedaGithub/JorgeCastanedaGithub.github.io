@@ -75,7 +75,7 @@ def main():
     # 3. Read each detail link and print text inside id="DivDetalleNota"
     for url in detail_links:
         try:
-            detail_res = session.get(url, timeout=15)
+            detail_res = session.get(url['link'], timeout=15)
             detail_res.raise_for_status()
             
             detail_soup = BeautifulSoup(detail_res.text, 'html.parser')
@@ -96,7 +96,7 @@ def main():
             supabase.table("dof_day_text").insert(row_data).execute()
                 
         except Exception as e:
-            print(f"Error reading detail page {url}: {e}")
+            print(f"Error processing {url.get('link', 'Unknown Link')}: {e}\n")
 
 if __name__ == "__main__":
     main()
