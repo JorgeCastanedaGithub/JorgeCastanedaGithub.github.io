@@ -2,7 +2,7 @@ name: Daily Massive Data Fetcher
 
 on:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 8 * * 2-6'
   workflow_dispatch:
 
 jobs:
